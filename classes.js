@@ -21,7 +21,14 @@ Each employee can:
 
 call your class Employee and receive all the data in the constructor in the order listed
 */
-
+class Employeeclass{
+    constructor() {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.age = age;
+    }
+}
 
 
 /*
@@ -90,3 +97,25 @@ It can :
       It should set decrease wear_and_tear_count by 10, and set needs_reboot to false
 
 */
+class machine {
+    constructor() {
+      this.widgets_made_count = 0;
+      this.wear_and_tear_count = 0;
+      this.needs_reboot = false;
+    }
+    makeWidgets(number){
+      this.widgets_made_count += number;
+      this.wear_and_tear_count += Math.floor(number/50)
+    }
+    fixMachine() {
+      this.needs_reboot = true;
+    }
+    reboot(){
+      return ()=> {
+        this.wear_and_tear_count -= 10;
+        this.needs_reboot = false;
+      }
+    }
+  }
+  
+  

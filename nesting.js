@@ -38,7 +38,17 @@ var employees = [{
 
 // Code here
 
-
+var employeeUpdater = () => {
+  for (var i = 0; i < employees; i++) {
+    if (employees.firstName === "Theo") {
+      array.slice(i, 1);
+    }
+    if (employees.firstName === "Lorie") {
+      employees.department = "HR"
+    }
+  }
+  return employees;
+}
 
 
 
@@ -54,6 +64,11 @@ var employees = [{
 
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
+var removeDuplicates = () => {
+  return [... new Set(workplaceAccidents)];
+};
+
+ removeDuplicates()
 // Code here
 
 
